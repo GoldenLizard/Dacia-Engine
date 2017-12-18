@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Definitions.hpp" />
+    <ClInclude Include="Geometry\Angle.hpp">
+      <Filter>Geometric</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Point.hpp">
+      <Filter>Geometric</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Rectangle.hpp">
+      <Filter>Geometric</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Circle.hpp">
+      <Filter>Geometric</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Geometry.hpp">
+      <Filter>Geometric</Filter>
+    </ClInclude>
+    <ClInclude Include="Color\Colors.hpp">
+      <Filter>Color</Filter>
+    </ClInclude>
+    <ClInclude Include="Vectorial\VectorUtil.hpp">
+      <Filter>Vectorial</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\BezierSpline.hpp">
+      <Filter>Geometric</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Barycentric.hpp">
+      <Filter>Geometric</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Coordinates.hpp">
+      <Filter>Geometric</Filter>
+    </ClInclude>
+    <ClInclude Include="Vectorial\Vector4.hpp">
+      <Filter>Vectorial</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WindowsEntryPoint.cpp" />
+    <ClCompile Include="Geometry\Angle.cpp">
+      <Filter>Geometric</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Point.cpp">
+      <Filter>Geometric</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Rectangle.cpp">
+      <Filter>Geometric</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\Circle.cpp">
+      <Filter>Geometric</Filter>
+    </ClCompile>
+    <ClCompile Include="Color\Colors.cpp">
+      <Filter>Color</Filter>
+    </ClCompile>
+    <ClCompile Include="Vectorial\VectorUtil.cpp">
+      <Filter>Vectorial</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\BezierSpline.cpp">
+      <Filter>Geometric</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Numerics">
+      <UniqueIdentifier>{92016899-501f-4c6a-9a0f-fdfbc04efc6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Color">
+      <UniqueIdentifier>{b703d5a7-212e-4484-b359-7a47e7fa93fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometric">
+      <UniqueIdentifier>{8b3e68f0-0870-4614-b14e-7fdac57cb90a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vectorial">
+      <UniqueIdentifier>{4c3c203b-7b6d-442b-ab59-28d4cb4d7ee4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

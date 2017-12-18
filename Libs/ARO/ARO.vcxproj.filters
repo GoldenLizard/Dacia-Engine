@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Counters">
+      <UniqueIdentifier>{8b13174f-28fc-44a6-a35a-327da98c548e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data Structures">
+      <UniqueIdentifier>{6494a276-368b-4e94-a423-615bd09ec995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logger">
+      <UniqueIdentifier>{c1ec45a7-bf64-4254-ba47-cb25190e538f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Counters\FPSCounter.cpp">
+      <Filter>Counters</Filter>
+    </ClCompile>
+    <ClCompile Include="Counters\Stopwatch.cpp">
+      <Filter>Counters</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsEntryPoint.cpp" />
+    <ClCompile Include="Data Structures\CircularBuffer.cpp">
+      <Filter>Data Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\LogStream.cpp">
+      <Filter>Logger</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Counters\Stopwatch.hpp">
+      <Filter>Counters</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared.hpp" />
+    <ClInclude Include="Counters\FPSCounter.hpp">
+      <Filter>Counters</Filter>
+    </ClInclude>
+    <ClInclude Include="Data Structures\CircularBuffer.hpp">
+      <Filter>Data Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\LogStream.hpp">
+      <Filter>Logger</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

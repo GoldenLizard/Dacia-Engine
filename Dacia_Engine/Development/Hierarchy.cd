@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Dacia::Graphics::ShaderImpl" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>JKgAEEogBAAAAgENCAAAAAAAAAEOAAQQHIAHAEAQAAY=</HashCode>
+      <FileName>Graphics\Shader.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dacia::Graphics::OpenGL::ShaderImplOpenGL" Collapsed="true">
+    <Position X="1.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCgCEEogBAAQAgUNCAAAAAIAAAEOAAAUHAAHAEAQQFY=</HashCode>
+      <FileName>Graphics\OpenGL\ShaderOpenGL.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dacia::ResourceManager" Collapsed="true">
+    <Position X="5.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Managers\ResourceManager.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GLFWApp" Collapsed="true">
+    <Position X="8.75" Y="2.25" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="GLFWApp::WindowDestructor" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Launchers\CrossPlatform\GLFWApp.hpp</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CCQAAgAICADAAAAAMAAAAAAAACBQAAAEAIQmAcCAAAA=</HashCode>
+      <FileName>Launchers\CrossPlatform\GLFWApp.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application" Collapsed="true">
+    <Position X="8.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAABAgAAAAAAAAAAAAAABCAAAMAIACAMAAAAI=</HashCode>
+      <FileName>Launchers\Application.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dacia::Graphics::Shader" Collapsed="true">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIgCAQAABMAAAAiEsAAAAAIAAAABAAAQBAQAAAABQAI=</HashCode>
+      <FileName>Graphics\Shader.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dacia::MemoryAllocationTracker" Collapsed="true">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABEAAEAIACAAAgAEAAAAAAQAABAAAIAAAAAAAgAAAA=</HashCode>
+      <FileName>Managers\MemoryAllocationTracker.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dacia::Log::LogBuffer&lt;glyph, traits&gt;" Collapsed="true">
+    <Position X="3.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAEAAIBAAAIAAgAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\LogStream.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dacia::KeyboardBuffer" Collapsed="true">
+    <Position X="6.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\KeyboardBuffer.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dacia::Engine" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAkAAAAAACQAAAAAAAACAAAAJABAAAAABAAAAQAAAAA=</HashCode>
+      <FileName>Engine.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dacia::Graphics::Driver" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAAQAAAAAACAEAAAAAAAGIAAQACgAAECEAIAAAAAIA=</HashCode>
+      <FileName>Graphics\Driver.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Dacia::Skeletons::Noncopyable">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAEA=</HashCode>
+      <FileName>Utilities\Skeletons.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Dacia::Skeletons::Unique" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Utilities\Skeletons.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Dacia::Skeletons::Command" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Utilities\Skeletons.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Dacia::Skeletons::Immovable" Collapsed="true">
+    <Position X="8.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgACAAAAA=</HashCode>
+      <FileName>Utilities\Skeletons.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Dacia::Key" Collapsed="true">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAAQAAAAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAQAgA=</HashCode>
+      <FileName>IO\KeyboardBuffer.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="Dacia::Graphics::DRIVER" Collapsed="true">
+    <Position X="10.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgACAAAAAAAAAAAAAAAAAAAAAAgCAAAAAAAAEAAAA=</HashCode>
+      <FileName>Graphics\Driver.hpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Dacia::Graphics::COORD_SYS" Collapsed="true">
+    <Position X="10.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAQA=</HashCode>
+      <FileName>Graphics\Driver.hpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC5EB4D1-D917-4C76-8FF2-204CB36B4055}</ProjectGuid>
+    <RootNamespace>Dacia_Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\Warheroes\Dacia_Engine_0.1v\Dacia_Engine;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\Warheroes\Dacia_Engine_0.1v\Dacia_Engine;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>D:\Warheroes\Dacia_Engine_0.1v\Dacia_Engine;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>D:\Warheroes\Dacia_Engine_0.1v\Dacia_Engine;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glfw/glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Warheroes\Dacia_Engine_0.1v\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\Warheroes\Dacia_Engine_0.1v\Libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glfw/glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Warheroes\Dacia_Engine_0.1v\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glfw/glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Warheroes\Dacia_Engine_0.1v\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\Warheroes\Dacia_Engine_0.1v\Libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glfw/glfw3.lib;opengl32.lib;x64/Release/ARO.lib;x64/Release/Dacia.Math.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Warheroes\Dacia_Engine_0.1v\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="3rd Party\src\glad.c" />
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Graphics\Driver.cpp" />
+    <ClCompile Include="Graphics\Geometry\Vertex.cpp" />
+    <ClCompile Include="Graphics\GpuBuffer.cpp" />
+    <ClCompile Include="Graphics\OpenGL\OpenGL_Utils.cpp" />
+    <ClCompile Include="Graphics\OpenGL\ShaderOpenGL.cpp" />
+    <ClCompile Include="Graphics\Renderer.cpp" />
+    <ClCompile Include="Graphics\Shader.cpp" />
+    <ClCompile Include="IO\File.cpp" />
+    <ClCompile Include="IO\KeyboardBuffer.cpp" />
+    <ClCompile Include="IO\LogStream.cpp" />
+    <ClCompile Include="Launchers\Application.cpp" />
+    <ClCompile Include="Launchers\CrossPlatform\GLFWApp.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Managers\FileManager.cpp" />
+    <ClCompile Include="Managers\GPUHeapTracker.cpp" />
+    <ClCompile Include="Managers\MemoryAllocationTracker.cpp" />
+    <ClCompile Include="Managers\ResourceManager.cpp" />
+    <ClCompile Include="Managers\ShaderManager.cpp" />
+    <ClCompile Include="Utilities\EngineUtilities.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3rd Party\include\glad\glad.h" />
+    <ClInclude Include="3rd Party\include\KHR\khrplatform.h" />
+    <ClInclude Include="3rd Party\include\stbi\stbi_image.h" />
+    <ClInclude Include="Engine.hpp" />
+    <ClInclude Include="Graphics\DaciaGraphics.hpp" />
+    <ClInclude Include="Graphics\Driver.hpp" />
+    <ClInclude Include="Graphics\Factories\ShaderFactory.hpp" />
+    <ClInclude Include="Graphics\Geometry\Geometry.hpp" />
+    <ClInclude Include="Graphics\Geometry\Vertex.hpp" />
+    <ClInclude Include="Graphics\GpuBuffer.hpp" />
+    <ClInclude Include="Graphics\OpenGL\OpenGL_Strings.hpp" />
+    <ClInclude Include="Graphics\OpenGL\OpenGL_Utils.hpp" />
+    <ClInclude Include="Graphics\OpenGL\ShaderOpenGL.hpp" />
+    <ClInclude Include="Graphics\Renderer.hpp" />
+    <ClInclude Include="Graphics\Shader.hpp" />
+    <ClInclude Include="IO\File.hpp" />
+    <ClInclude Include="IO\KeyboardBuffer.hpp" />
+    <ClInclude Include="IO\LogStream.hpp" />
+    <ClInclude Include="Launchers\Application.hpp" />
+    <ClInclude Include="Launchers\CrossPlatform\GLFWApp.hpp" />
+    <ClInclude Include="Launchers\Windows\WindowsApp.hpp" />
+    <ClInclude Include="Managers\FileManager.hpp" />
+    <ClInclude Include="Managers\GPUHeapTracker.hpp" />
+    <ClInclude Include="Managers\MemoryAllocationTracker.hpp" />
+    <ClInclude Include="Managers\ResourceManager.hpp" />
+    <ClInclude Include="Managers\ShaderManager.hpp" />
+    <ClInclude Include="System\NativeFileSystem.hpp" />
+    <ClInclude Include="System\OSGeneral.hpp" />
+    <ClInclude Include="Utilities\Assertions.hpp" />
+    <ClInclude Include="Utilities\Common.hpp" />
+    <ClInclude Include="Utilities\EngineUtilities.hpp" />
+    <ClInclude Include="Utilities\Skeletons.hpp" />
+    <ClInclude Include="Utilities\StringUtils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libs\ARO\ARO.vcxproj">
+      <Project>{c14ecede-2084-428f-99c0-13b3e7bad55c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Development\Hierarchy.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

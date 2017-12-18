@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Main.cpp">
+      <Filter>Launchers</Filter>
+    </ClCompile>
+    <ClCompile Include="Launchers\Application.cpp">
+      <Filter>Launchers</Filter>
+    </ClCompile>
+    <ClCompile Include="Launchers\CrossPlatform\GLFWApp.cpp">
+      <Filter>Launchers</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\EngineUtilities.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Driver.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Renderer.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Shader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\KeyboardBuffer.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\LogStream.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="3rd Party\src\glad.c">
+      <Filter>3rd Party</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\ResourceManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\MemoryAllocationTracker.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\OpenGL\OpenGL_Utils.cpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\ShaderManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\FileManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\File.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\OpenGL\ShaderOpenGL.cpp">
+      <Filter>Graphics\OpenGL\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Geometry\Vertex.cpp">
+      <Filter>Graphics\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\GPUHeapTracker.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\GpuBuffer.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine.hpp" />
+    <ClInclude Include="Launchers\Application.hpp">
+      <Filter>Launchers</Filter>
+    </ClInclude>
+    <ClInclude Include="Launchers\CrossPlatform\GLFWApp.hpp">
+      <Filter>Launchers</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\EngineUtilities.hpp">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\DaciaGraphics.hpp">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Driver.hpp">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Renderer.hpp">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Shader.hpp">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\KeyboardBuffer.hpp">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\LogStream.hpp">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Common.hpp">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Skeletons.hpp">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="3rd Party\include\glad\glad.h">
+      <Filter>3rd Party</Filter>
+    </ClInclude>
+    <ClInclude Include="3rd Party\include\KHR\khrplatform.h">
+      <Filter>3rd Party</Filter>
+    </ClInclude>
+    <ClInclude Include="3rd Party\include\stbi\stbi_image.h">
+      <Filter>3rd Party</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\ResourceManager.hpp">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Assertions.hpp">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\MemoryAllocationTracker.hpp">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\OpenGL\OpenGL_Strings.hpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\OpenGL\OpenGL_Utils.hpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Geometry\Geometry.hpp">
+      <Filter>Graphics\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\ShaderManager.hpp">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\FileManager.hpp">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\File.hpp">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\OpenGL\ShaderOpenGL.hpp">
+      <Filter>Graphics\OpenGL\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Geometry\Vertex.hpp">
+      <Filter>Graphics\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="System\OSGeneral.hpp">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Factories\ShaderFactory.hpp">
+      <Filter>Graphics\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\GPUHeapTracker.hpp">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\GpuBuffer.hpp">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Launchers\Windows\WindowsApp.hpp" />
+    <ClInclude Include="Utilities\StringUtils.hpp">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{0864e37b-9be0-4ce7-96ce-4ee22b15e327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{79228e29-946d-476f-a059-627169ce160c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IO">
+      <UniqueIdentifier>{7217e7e5-6baa-45b3-9672-7a8b66d52312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Launchers">
+      <UniqueIdentifier>{4be35d7e-6b3a-45d7-8ae9-b8861fd13b56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\OpenGL">
+      <UniqueIdentifier>{a12c0f36-3d28-4c65-add1-6ac8e8a08bbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rd Party">
+      <UniqueIdentifier>{b1d328a3-3f57-4572-a682-bd4b0e2a375b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{1f095b20-6452-490e-ab04-2a6ecbb25671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Geometry">
+      <UniqueIdentifier>{5ad7596d-a1d1-4ea8-a9dc-119ac7c515d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Development">
+      <UniqueIdentifier>{6e89dbd6-7461-44a8-8fca-b1187d07a29d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Factories">
+      <UniqueIdentifier>{f94fe0a6-1ee2-4484-a30a-cb62ba9f98ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\OpenGL\Shader">
+      <UniqueIdentifier>{a12bb01e-9a39-43ea-a186-30e0a11acdbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{13517e4f-4a98-4d73-84f4-979eaeafbd09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\OpenGLES">
+      <UniqueIdentifier>{f6aaefdc-cefc-4aed-baad-af4ba1e739ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Vulkan">
+      <UniqueIdentifier>{11504bd4-2ae1-4836-8589-68eb06aefa91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX">
+      <UniqueIdentifier>{c1c9ea86-28a7-447e-8bdf-32acca7a81ea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Development\Hierarchy.cd">
+      <Filter>Development</Filter>
+    </None>
+  </ItemGroup>
+</Project>
