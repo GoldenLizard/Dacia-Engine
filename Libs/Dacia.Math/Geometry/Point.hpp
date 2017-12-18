@@ -7,6 +7,21 @@ namespace dmath
 	typedef Vector2 Point2D;
 	typedef Vector3 Point3D;
 
+	//struct Point2D
+	//{
+	//	//euclidean, barycentric, spherical
+	//	union { highP x, alpha, roll; };
+	//	union { highP y, beta,  yaw;  };
+	//};
+
+	//struct Point3D
+	//{
+	//	//euclidean, barycentric, spherical
+	//	union { highP x, alpha, roll; };
+	//	union { highP y, beta,  yaw;  };
+	//	union { highP z, gamma, pitch;};
+	//};
+
 	double constexpr ManhattanDistance(Point2D a, Point2D b)
 	{
 		return (absolute(a.x - b.x) + absolute(a.y - b.y));

@@ -127,7 +127,7 @@ void Dacia::Graphics::Shader::SetVersion()
 								  &m_control })
 
 		if (!shader->empty())
-			m_shaderImpl->SetVersion(Engine::GetCurrentDriver()->GetCurrentVersion().second, *shader);
+			m_shaderImpl->SetVersion(DaciaEngine()->GetCurrentDriver()->GetCurrentVersion().second, *shader);
 }
 
 void Dacia::Graphics::Shader::SetDriverImplementation()

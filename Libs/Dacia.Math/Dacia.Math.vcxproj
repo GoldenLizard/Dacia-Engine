@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1A795A7D-A866-4110-987D-0B1DAFA1ABA8}</ProjectGuid>
     <RootNamespace>DaciaMath</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -69,7 +69,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:\Warheroes\Dacia_Engine_0.1v\Libs\Dacia.Math;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\..\Libs\Dacia.Math;$(VC_SourcePath);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)\..\Libs\Dacia.Math;$(VC_SourcePath);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)\..\Libs\Dacia.Math;$(VC_SourcePath);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)\..\Libs\Dacia.Math;$(VC_SourcePath);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -123,6 +132,7 @@
     <ClInclude Include="Geometry\Geometry.hpp" />
     <ClInclude Include="Geometry\Point.hpp" />
     <ClInclude Include="Geometry\Rectangle.hpp" />
+    <ClInclude Include="Random\Random.hpp" />
     <ClInclude Include="Vectorial\Vector4.hpp" />
     <ClInclude Include="Vectorial\VectorUtil.hpp" />
   </ItemGroup>

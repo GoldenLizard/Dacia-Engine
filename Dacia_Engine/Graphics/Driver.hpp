@@ -4,13 +4,16 @@
 #include <Utilities/EngineUtilities.hpp>
 #include <Graphics/DaciaGraphics.hpp>
 #include <Dacia.Math\Color\Colors.hpp>
-
 #include <queue>
 
 namespace Dacia
 {
 	namespace Graphics
 	{
+		enum class ShaderTypes;
+		class DriverImpl;
+		class Scene3D;
+
 		enum class DriverType 
 			: byte
 		{
@@ -33,14 +36,25 @@ namespace Dacia
 			COLOR	= 1 << 1,
 			STENCIL = 1 << 2,
 			DEPTH	= 1 << 3,
+			ALL		= COLOR | STENCIL | DEPTH
 		};
 
 		enum class BlendMode
 		{
 			NONE,
-			LESS,
-			MORE,
+			FULL,
+			LESS_DST,
+			MORE_DST,
+			LESS_SRC,
+			MORE_SRC,
+			CONSTANT,
 			EQUAL,
+			REVERSE_SRC,
+			REVERSE_DST,
+			COLOR_SRC,
+			COLOR_DST,
+			BRIGHTNESS,
+			CUSTOM
 		};
 
 		struct DriverOptions
@@ -51,12 +65,10 @@ namespace Dacia
 			CoordinateSystem coordSystem;
 			byte			 driverVersion;
 			bool			 enableGPUTracking;
-			//ShaderType		 supportedShaders;
-
+			ShaderTypes		 supportedShaders;
+			GPUBufferType	 supportedBuffers;
 		};
 
-		class DriverImpl;
-		class Scene3D;
 
 		struct DriverEvent
 		{
@@ -80,6 +92,24 @@ namespace Dacia
 			{
 				return std::make_pair(x,y);
 			}
+
+			inline constexpr bool operator==(Resolution other) const
+			{
+				return  x == other.x &&
+						y == other.y;
+			}
+
+			inline constexpr bool operator==(dmath::Vector2 other) const
+			{
+				return  x == other.x &&
+						y == other.y;
+			}
+
+			inline constexpr bool operator==(std::pair<uint32,uint32> other) const
+			{
+				return  x == other.first &&
+						y == other.second;
+			}
 		};
 
 		typedef std::shared_ptr<DriverImpl> DriverImplPtr;
@@ -89,7 +119,12 @@ namespace Dacia
 		{
 			protected:
 				
-				DriverType			m_driverType;
+				DriverType					m_driverType;
+				std::pair<DriverType, byte>	m_driverVersion;
+				GPUBufferType				m_buffersUsed;
+				Color						m_currentClearColor;
+				ShaderTypes					m_supportedShaders;
+				BlendMode					m_currentBlendMode;
 
 			public:
 
@@ -102,7 +137,13 @@ namespace Dacia
 				virtual void Render2D()	= 0;
 				virtual void Render3D()	= 0;
 
+				virtual void ClearBuffers() = 0;
+				virtual void ClearColor();
+
+				std::pair<DriverType, byte> GetVersion();
+
 				virtual void BindDefaultFramebuffer() = 0;
+				virtual void BindFramebuffer(FramebufferPtr) = 0;
 		};
 
 		class Driver : 
@@ -120,9 +161,10 @@ namespace Dacia
 				void RestoreDefaultFramebuffer();
 				void RenderToTarget(FramebufferPtr);
 
-				void SetClearColors(Color);
+				void SetClearColor(Color);
 				void SetBuffersToClear(GPUBufferType);
 
+				void ClearColor();
 				void ClearColor(Color c);
 				void ClearBuffers(GPUBufferType buffers);
 
@@ -134,12 +176,14 @@ namespace Dacia
 				bool VerifyObject(GPUHandlePtr);
 				void BroadcastEvent(DriverEvent*);
 
-				std::queue<DriverEvent> GetEventQueue();
+				std::queue<DriverEvent*> GetEventQueue();
 
 				void SetFullScreenViewport();
 				void SetResolution(Resolution res);
 
 				Resolution GetMaxResouliton();
+
+				bool IsShaderSupported(ShaderTypes typeToCheck);
 
 				std::string GetVendorName();
 				std::string GetRendererName();
@@ -147,7 +191,7 @@ namespace Dacia
 
 			private:
 
-				std::queue<DriverEvent> m_events;
+				std::queue<DriverEvent*> m_events;
 
 				DriverImplPtr			m_driverImpl;
 				FramebufferImplPtr		m_currentRenderTarget;

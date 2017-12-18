@@ -47,7 +47,7 @@ void GLFWApp::Init()
 		}
 		catch (std::exception e)
 		{
-			Log::Print(LOG::LOG_ERROR, "%s", e.what());
+			Log::Print(LOG::LOG_ERROR, "Exception caught: %s", e.what());
 		}
 	}
 	else
@@ -145,15 +145,13 @@ void GLFWApp::SetKeyCallback(void(*callback)(GLFWwindow *, int, int, int))
 
 GLFWmonitor * GLFWApp::GetMonitor(GLuint const & no)
 {
-	try
-	{
-		return m_monitors[no];
-	}
-	catch (std::out_of_range e)
+	if (no > m_monitors.size())
 	{
 		Log::Print(LOG::LOG_ERROR, "Monitor %d doesn't exist!", no);
 		return glfwGetPrimaryMonitor();
 	}
+	else
+		return m_monitors[no];
 }
 
 std::unique_ptr<GLFWwindow, GLFWApp::WindowDestructor> GLFWApp::GetWindow()
@@ -163,7 +161,7 @@ std::unique_ptr<GLFWwindow, GLFWApp::WindowDestructor> GLFWApp::GetWindow()
 
 void GLFWApp::OnError(int errorCode, char * error)
 {
-	Log::Print(LOG::LOG_ERROR, "GLFW_ERROR[#%d] .%s!", errorCode, error);
+	Log::Print(LOG::LOG_ERROR, "GLFW_ERROR[#%d]: .%s!", errorCode, error);
 }
 
 void GLFWApp::GetMonitors()

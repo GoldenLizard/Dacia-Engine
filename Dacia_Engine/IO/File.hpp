@@ -4,6 +4,7 @@
 #include <Utilities\StringUtils.hpp>
 #include <System\OSGeneral.hpp>
 #include <sstream>
+#include <exception>
 
 namespace Dacia
 {
@@ -15,7 +16,10 @@ namespace Dacia
 		template<typename _pchar = char>
 		struct Path
 		{
-			static constexpr _pchar SEPARATORS[]{ _pchar('/'), _pchar('\\'), _pchar('.') };
+			static constexpr _pchar SEPARATORS[]
+			{ _pchar('/'), 
+			  _pchar('\\'), 
+			  _pchar('.') };
 
 			Path(std::basic_string<_pchar> filepath);
 			Path();
@@ -72,15 +76,25 @@ namespace Dacia
 				struct InvalidFileOperation:
 					public std::runtime_error
 				{
-					explicit InvalidOperation(std::string const & msg);
-					explicit InvalidOperation(std::wstring const & msg);
+					explicit inline InvalidFileOperation(std::string const & msg):
+						std::runtime_error(msg)
+					{}
+
+					explicit inline InvalidFileOperation(std::wstring const & msg):
+						std::runtime_error(msg)
+					{}
 				};
 
-				struct FailedFileOperation
+				struct FailedFileOperation:
 					public std::runtime_error
 				{
-					explicit FailedFileOperation(std::string const & msg);
-					explicit FailedFileOperation(std::wstring const & msg);
+					explicit inline FailedFileOperation(std::string const & msg):
+						std::runtime_error(msg)
+					{}
+
+					explicit inline FailedFileOperation(std::wstring const & msg):
+						std::runtime_error(msg)
+					{}
 				};
 
 			private:
@@ -107,7 +121,7 @@ namespace Dacia
 			public:
 
 				File(std::basic_string<_pchar> path, bool createFile = true, bool isTemporary = false);
-				File(Path path, bool createFile = true, bool isTemporary = false);
+				File(Path<_pchar> path, bool createFile = true, bool isTemporary = false);
 
 				~File();
 
@@ -165,10 +179,9 @@ namespace Dacia
 				std::string GetName()		const;
 				std::string GetOnlyName()	const;
 
-		};
+};
 
-
-		FileState operator|=(FileState & f1, FileState f2)
+	/*	FileState operator|=(FileState & f1, FileState f2)
 		{
 			return (f1 = static_cast<FileState>(static_cast<byte>(f1) | static_cast<byte>(f2)));
 		}
@@ -229,17 +242,7 @@ namespace Dacia
 		OpenMode operator^(OpenMode openMode1, OpenMode openMode2)
 		{
 			return openMode1 ^= openMode2;
-		}
-		template<typename _pchar>
-		inline bool File<_pchar>::IsOpen() const
-		{
-			return false;
-		}
-		template<typename _pchar>
-		inline bool File<_pchar>::Exists() const
-		{
-			return false;
-		}
+		}*/
 
 		template<typename _pchar>
 		bool inline File<_pchar>::IsOpen() const

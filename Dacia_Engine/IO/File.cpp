@@ -1,7 +1,22 @@
 #include "File.hpp"
 
-template<typename _char>
-bool Dacia::IO::File<typename _char>::Remove()
+template<typename _pchar>
+Dacia::IO::File<_pchar>::File(std::basic_string<_pchar> path, bool createFile, bool isTemporary)
+{
+}
+
+template<typename _pchar>
+Dacia::IO::File<_pchar>::File(Path<_pchar> path, bool createFile, bool isTemporary)
+{
+}
+
+template<typename _pchar>
+Dacia::IO::File<_pchar>::~File()
+{
+}
+
+template<typename _pchar>
+bool Dacia::IO::File<_pchar>::Remove()
 {
 	if (IsOpen())
 	{
@@ -24,13 +39,6 @@ bool Dacia::IO::File<typename _char>::Remove()
 
 	Log::Print(LOG::LOG_ERROR, "Failed to delete file: %s", m_path.ToString());
 	return false;
-}
-
-template<typename _pchar>
-Dacia::IO::Path<_pchar>::Path(std::basic_string<_pchar> filepath):
-	m_filepath(filepath)
-{
-
 }
 
 template<typename _pchar>
@@ -87,11 +95,6 @@ template<typename _pchar>
 std::basic_string<_pchar> Dacia::IO::Path<_pchar>::GetExtension()
 {
 	return m_extension;
-}
-
-template<typename _pchar>
-Dacia::IO::File<_pchar>::File(Path<_pchar> path, bool createFile, bool isTemporary)
-{
 }
 
 template<typename _pchar>

@@ -70,7 +70,10 @@ namespace dmath
 
 	enum class CoordinateSystem
 	{
-		EUCLIDEAN, HOMOGENOUS, BARYCENTRIC
+		EUCLIDEAN, 
+		HOMOGENOUS, 
+		BARYCENTRIC, 
+		POLAR
 	};
 
 	enum class Endian : byte
@@ -127,6 +130,13 @@ namespace dmath
 	DMATH_DECLARATION LowByte(uint16 word)
 	{
 		return word & 0x00ff;
+	}
+
+	DMATH_UTIL
+		bool  constexpr
+		DMATH_DECLARATION Support80bitsFloat()
+	{
+		return sizeof(long double) == 10;
 	}
 
 	DMATH_UTIL

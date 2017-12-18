@@ -156,6 +156,7 @@
     <ClInclude Include="Utilities\StringUtils.hpp">
       <Filter>Utilities</Filter>
     </ClInclude>
+    <ClInclude Include="System\NativeFileSystem.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Graphics">

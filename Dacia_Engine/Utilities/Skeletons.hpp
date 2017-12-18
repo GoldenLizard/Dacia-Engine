@@ -36,9 +36,11 @@ namespace Dacia
 			}
 		};
 
+		template<typename T>
 		struct Iterator
 		{
-
+			virtual void next()		= 0;
+			virtual void previous() = 0;
 		};
 
 		struct Observer

@@ -6,23 +6,25 @@ namespace Dacia
 {
 	namespace System
 	{
+		class OS_Specs;
 		class Console;
 		class Dialog;
 		class Widget;
 
 		enum class OSType : byte
 		{
-			WINDOWS,
-			LINUX,
+			UNKNOWN,
+			WINDOWS_32,
+			WINDOWS_64,
+			LINUX_32,
+			LINUX_64,
 			UNIX
 		};
 
-		constexpr OSType GetCurrentOS()
-		{
-			#ifdef _WIN32
-				return OSType::WINDOWS;
-			#endif
-		}
+		//constexpr OSType GetCurrentOS()
+		//{
+		//	
+		//}
 
 		enum class MsgBoxOption : byte
 		{

@@ -12,8 +12,9 @@ namespace dmath
 			RGB332,
 			RGB565,
 			RGB888,
+			YUV888,
 			RGBA8888,
-			CYMK8888
+			CYMK8888,
 		};
 
 		struct Color
@@ -28,6 +29,7 @@ namespace dmath
 			byte	rgb332(Endian) const;
 			uint16	rgb565(Endian) const;
 			uint32  rgb888(Endian) const; 
+			uint32  yuv888(Endian) const;
 
 			uint32	rgba8888(Endian) const;
 			uint32	cymk8888(Endian) const;

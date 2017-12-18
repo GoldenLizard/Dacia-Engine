@@ -1,0 +1,27 @@
+﻿  EngineUtilities.cpp
+  ShaderManager.cpp
+  ResourceManager.cpp
+  MemoryAllocationTracker.cpp
+  GPUHeapTracker.cpp
+  FileManager.cpp
+  Main.cpp
+  GLFWApp.cpp
+  Application.cpp
+  LogStream.cpp
+  KeyboardBuffer.cpp
+  File.cpp
+  Shader.cpp
+  Renderer.cpp
+  ShaderOpenGL.cpp
+  OpenGL_Utils.cpp
+  GpuBuffer.cpp
+  Vertex.cpp
+  Driver.cpp
+  Engine.cpp
+  Generating Code...
+d:\workspace\personal\dacia-engine\dacia_engine\graphics\opengl\shaderopengl.cpp(368): error C4716: 'Dacia::Graphics::OpenGL::ShaderImplOpenGL::GetProgramSizeInBytes': must return a value
+d:\workspace\personal\dacia-engine\dacia_engine\graphics\opengl\shaderopengl.cpp(76): warning C4715: 'Dacia::Graphics::OpenGL::ShaderImplOpenGL::CompileShader': not all control paths return a value
+d:\workspace\personal\dacia-engine\dacia_engine\graphics\shader.cpp(165): warning C4715: '<lambda_5982ed524c83ff48571738adffcc2c79>::operator()': not all control paths return a value
+  Compiling...
+  glad.c
+  Generating Code...

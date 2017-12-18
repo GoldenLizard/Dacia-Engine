@@ -1,0 +1,15 @@
+﻿  WindowsEntryPoint.cpp
+  VectorUtil.cpp
+d:\workspace\personal\dacia-engine\libs\dacia.math\vectorial\vectorutil.cpp(10): warning C4244: 'argument': conversion from 'dmath::highP' to 'float', possible loss of data
+  Rectangle.cpp
+  Point.cpp
+  Circle.cpp
+  BezierSpline.cpp
+  Angle.cpp
+  Colors.cpp
+  Generating Code...
+d:\workspace\personal\dacia-engine\libs\dacia.math\color\colors.cpp(140): warning C4715: 'dmath::color::Color::rgb888': not all control paths return a value
+d:\workspace\personal\dacia-engine\libs\dacia.math\color\colors.cpp(89): warning C4715: 'dmath::color::Color::rgb332': not all control paths return a value
+d:\workspace\personal\dacia-engine\libs\dacia.math\color\colors.cpp(167): warning C4715: 'dmath::color::Color::rgba8888': not all control paths return a value
+d:\workspace\personal\dacia-engine\libs\dacia.math\color\colors.cpp(115): warning C4715: 'dmath::color::Color::rgb565': not all control paths return a value
+d:\workspace\personal\dacia-engine\libs\dacia.math\vectorial\vectorutil.cpp(36): error C4716: '<lambda_fbcdfdce439e240cbf9ff97ef17c072c>::operator()': must return a value

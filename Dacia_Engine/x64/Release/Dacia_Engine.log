@@ -1,11 +1,8 @@
-﻿  File.cpp
-  FileManager.cpp
-FileManager.obj : error LNK2005: "enum Dacia::IO::FileState __cdecl Dacia::IO::operator^(enum Dacia::IO::FileState,enum Dacia::IO::FileState)" (??TIO@Dacia@@YA?AW4FileState@01@W4201@0@Z) already defined in File.obj
-FileManager.obj : error LNK2005: "enum Dacia::IO::FileState __cdecl Dacia::IO::operator&(enum Dacia::IO::FileState,enum Dacia::IO::FileState)" (??IIO@Dacia@@YA?AW4FileState@01@W4201@0@Z) already defined in File.obj
-FileManager.obj : error LNK2005: "enum Dacia::IO::FileState __cdecl Dacia::IO::operator|(enum Dacia::IO::FileState,enum Dacia::IO::FileState)" (??UIO@Dacia@@YA?AW4FileState@01@W4201@0@Z) already defined in File.obj
-FileManager.obj : error LNK2005: "enum Dacia::IO::FileState __cdecl Dacia::IO::operator^=(enum Dacia::IO::FileState &,enum Dacia::IO::FileState)" (??_6IO@Dacia@@YA?AW4FileState@01@AEAW4201@W4201@@Z) already defined in File.obj
-FileManager.obj : error LNK2005: "enum Dacia::IO::FileState __cdecl Dacia::IO::operator&=(enum Dacia::IO::FileState &,enum Dacia::IO::FileState)" (??_4IO@Dacia@@YA?AW4FileState@01@AEAW4201@W4201@@Z) already defined in File.obj
-FileManager.obj : error LNK2005: "enum Dacia::IO::FileState __cdecl Dacia::IO::operator|=(enum Dacia::IO::FileState &,enum Dacia::IO::FileState)" (??_5IO@Dacia@@YA?AW4FileState@01@AEAW4201@W4201@@Z) already defined in File.obj
-ShaderOpenGL.obj : error LNK2001: unresolved external symbol "public: struct std::pair<enum Dacia::Graphics::DriverType,unsigned char> __cdecl Dacia::Graphics::Driver::GetCurrentVersion(void)" (?GetCurrentVersion@Driver@Graphics@Dacia@@QEAA?AU?$pair@W4DriverType@Graphics@Dacia@@E@std@@XZ)
-GPUHeapTracker.obj : error LNK2001: unresolved external symbol "public: class std::queue<struct Dacia::Graphics::DriverEvent,class std::deque<struct Dacia::Graphics::DriverEvent,class std::allocator<struct Dacia::Graphics::DriverEvent> > > __cdecl Dacia::Graphics::Driver::GetEventQueue(void)" (?GetEventQueue@Driver@Graphics@Dacia@@QEAA?AV?$queue@UDriverEvent@Graphics@Dacia@@V?$deque@UDriverEvent@Graphics@Dacia@@V?$allocator@UDriverEvent@Graphics@Dacia@@@std@@@std@@@std@@XZ)
-D:\Warheroes\Dacia_Engine_0.1v\Dacia_Engine\x64\Release\Dacia_Engine.exe : fatal error LNK1120: 2 unresolved externals
+﻿  Main.cpp
+  Generating code
+  91 of 1369 functions ( 6.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    14 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Dacia_Engine.vcxproj -> D:\Workspace\Personal\Dacia-Engine\Dacia_Engine\x64\Release\Dacia_Engine.exe
+  Dacia_Engine.vcxproj -> D:\Workspace\Personal\Dacia-Engine\Dacia_Engine\x64\Release\Dacia_Engine.pdb (Full PDB)

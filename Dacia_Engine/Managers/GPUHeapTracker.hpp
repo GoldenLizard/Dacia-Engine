@@ -3,7 +3,6 @@
 #include <Utilities\EngineUtilities.hpp>
 #include <Utilities\Skeletons.hpp>
 #include <Engine.hpp>
-
 #include <map>
 
 namespace Dacia
@@ -30,19 +29,19 @@ namespace Dacia
 		enum class HandleFlags
 			: byte
 		{
-			ALIVE,
-			DEAD,
-			USED
+			UNKNOWN,
+			ALIVE = 1 << 1,
+			USED  = 1 << 2
 		};
 
 
 		struct GPUHandle
 		{
-			uint32		  m_id{ 0 };
-			uint32		  m_refs{ 0 };
-			GPUObjectType m_type{ GPUObjectType::UNKNOWN };
-			byte		  m_flags{ 0 };
-			int64		  m_size{ UNKNOWN };
+			uint32		  m_id		{ 0 };
+			uint32		  m_refs	{ 0 };
+			GPUObjectType m_type	{ GPUObjectType::UNKNOWN };
+			byte		  m_flags	{ 0 };
+			int64		  m_size	{ UNKNOWN };
 
 			bool IsAlive();
 			bool IsValid();

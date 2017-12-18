@@ -7,12 +7,15 @@ namespace Dacia
 {
 	enum class KeyAction : byte
 	{
-		PRESS, HOLD, RELEASE
+		PRESS	= 1 << 0, 
+		HOLD	= 1 << 1, 
+		RELEASE = 1 << 2
 	};
 
 	struct Key
 	{
-		explicit Key(uint8 id);
+		explicit inline Key(uint8 id, 
+			std::initializer_list<std::pair<KeyAction,Skeletons::Command>>);
 
 		void OnAction(KeyAction);
 
@@ -21,12 +24,14 @@ namespace Dacia
 		std::unique_ptr<Skeletons::Command> onKeyRelease;
 
 		uint8 id;
-		bool  isHolded;
 	};
 
 	class KeyboardBuffer
 	{
 		public:
+
+			KeyboardBuffer();
+			void TriggerKey(byte keyID);
 
 		private:
 

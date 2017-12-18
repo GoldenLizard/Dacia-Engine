@@ -10,10 +10,10 @@ Dacia::Graphics::GPUHeapTracker::GPUHeapTracker(DriverOptions)
 
 void Dacia::Graphics::GPUHeapTracker::EventLoop()
 {
-	auto events = Engine::GetCurrentDriver()->GetEventQueue();
+	auto events = DaciaEngine()->GetCurrentDriver()->GetEventQueue();
 	
-	for(auto driverEvent = &events.front();
-		!events.empty(); driverEvent = &events.front(),
+	for(auto driverEvent = events.front();
+		!events.empty(); driverEvent = events.front(),
 		events.pop())
 	{
 		driverEvent->LogEvent();

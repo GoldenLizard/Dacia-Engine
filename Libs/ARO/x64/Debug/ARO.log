@@ -1,0 +1,7 @@
+﻿  WindowsEntryPoint.cpp
+  LogStream.cpp
+  CircularBuffer.cpp
+  Stopwatch.cpp
+  FPSCounter.cpp
+  Generating Code...
+LINK : fatal error LNK1561: entry point must be defined

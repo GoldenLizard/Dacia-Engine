@@ -35,6 +35,9 @@
     <ClInclude Include="Vectorial\Vector4.hpp">
       <Filter>Vectorial</Filter>
     </ClInclude>
+    <ClInclude Include="Random\Random.hpp">
+      <Filter>Random</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsEntryPoint.cpp" />
@@ -72,6 +75,9 @@
     </Filter>
     <Filter Include="Vectorial">
       <UniqueIdentifier>{4c3c203b-7b6d-442b-ab59-28d4cb4d7ee4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Random">
+      <UniqueIdentifier>{cf92d424-6c15-40c4-934b-8a9c704557a2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

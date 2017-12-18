@@ -151,7 +151,7 @@ Dacia::uint32 Dacia::Graphics::OpenGL::ShaderImplOpenGL::CompileShader(std::stri
 std::string Dacia::Graphics::OpenGL::ShaderImplOpenGL::GetDefaultShader(ShaderType shaderType)
 {
 	auto currentVersion = 
-		Engine::GetCurrentDriver()->GetCurrentVersion();
+		DaciaEngine()->GetCurrentDriver()->GetCurrentVersion();
 
 	Assert::Equal(currentVersion.first, DriverType::OPENGL);
 
@@ -347,10 +347,10 @@ void Dacia::Graphics::OpenGL::ShaderImplOpenGL::UseShader()
 
 void Dacia::Graphics::OpenGL::ShaderImplOpenGL::RegisterShader()
 {
-	Engine::GetMemoryTracker()->SignalObjectCreation
-								(GPUObjectType::SHADER_PROGRAM,
-								 m_sizeInBytes,
-								(void*)m_binaryData.c_str());
+	DaciaEngine()->GetMemoryTracker()->SignalObjectCreation
+										(GPUObjectType::SHADER_PROGRAM,
+										m_sizeInBytes,
+										(void*)m_binaryData.c_str());
 }
 
 void Dacia::Graphics::OpenGL::ShaderImplOpenGL::UnregisterShader()

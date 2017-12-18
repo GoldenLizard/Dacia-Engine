@@ -15,13 +15,12 @@ int main(int argc, char ** argv)
 #ifdef _WIN32
 	//FreeConsole();
 #endif
+
+	Log::Print(LOG::LOG_DEBUG, "Before app");
 	ApplicationPtr app = 
 		std::make_unique<GLFWApp>(GLFWApp("Game", 1200, 1200, false));
 
 	app->Init();
-
-	void * ptr = nullptr;
-	NULL_ASSERT(ptr);
 
 	std::random_device rnd;
 	std::mt19937 twst;

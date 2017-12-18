@@ -1,8 +1,6 @@
 #include "Engine.hpp"
 
-std::unique_ptr<Dacia::Engine> Dacia::Engine::daciaEngine = nullptr;
-
-void Dacia::Engine::InitEngine()
+Dacia::Engine::Engine()
 {
 }
 
@@ -12,11 +10,10 @@ Dacia::Engine::~Engine()
 
 const std::shared_ptr<Dacia::Graphics::Driver> Dacia::Engine::GetCurrentDriver()
 {
-	//return daciaEngine->m_Renderer->GetCurrentDriver();
-	return nullptr;
+	return this->m_Renderer->GetCurrentDriver();
 }
 
 const std::shared_ptr<Dacia::MemoryAllocationTracker> Dacia::Engine::GetMemoryTracker()
 {
-	return daciaEngine->m_MemoryTracker;
+	return this->m_MemoryTracker;
 }

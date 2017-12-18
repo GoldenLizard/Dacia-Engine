@@ -52,11 +52,15 @@ namespace Dacia
 		class Camera;
 		class Scene;
 		class SceneManager;
+		class RenderableEntity;
+		class RenderPipeline;
 
-		typedef std::shared_ptr<Camera>			CameraPtr;
-		typedef std::shared_ptr<Scene>			ScenePtr;
-		typedef std::shared_ptr<SceneManager>	SceneManagerPtr;
-		typedef std::shared_ptr<Driver>			DriverPtr;
+		typedef std::shared_ptr<RenderPipeline>			RenderPipelinePtr;
+		typedef std::shared_ptr<Camera>					CameraPtr;
+		typedef std::shared_ptr<Scene>					ScenePtr;
+		typedef std::shared_ptr<SceneManager>			SceneManagerPtr;
+		typedef std::shared_ptr<Driver>					DriverPtr;
+		typedef std::shared_ptr<Material>				MaterialPtr;
 
 		class Renderer final : 
 			public Skeletons::Unique
@@ -76,7 +80,8 @@ namespace Dacia
 
 				ScenePtr GetCurrentScene();
 				ScenePtr GetScene(std::string key);
-				
+
+				void PurgeAllScenes();
 				void RestoreDefaultScene();
 
 				void LoadRenderingPipeline();
@@ -102,18 +107,26 @@ namespace Dacia
 				void RenderToFile(std::string const & filename, bool createFile = true);
 				void ApplySucessivePasses(FramebufferPtr fbo, uint32 noTimes);
 
-				void ClearColor();
-				void ClearBuffers();
+				void SetClearColor(Color clearColor);
+				void SetClearBuffers(GPUBufferType buffersToClean);
 
 				void SetPostProcessStage();
 
-				void SetMaterial(Material &);
+				void SetMaterial(MaterialPtr);
 				void GetMaterial();
 
-				std::pair<std::string, uint16> GetDriverVersion();
+				DriverPtr GetCurrentDriver();
 
 			protected:
 
+				struct RendererCleaner
+				{
+					RendererCleaner();
+				   ~RendererCleaner();
+				    void Update();
+				};
+
+				DriverPtr									m_currentDriver;
 				RenderMode									m_renderMode;
 				SceneManagerPtr								m_sceneManager;
 				

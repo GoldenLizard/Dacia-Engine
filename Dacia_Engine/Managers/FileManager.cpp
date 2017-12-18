@@ -45,7 +45,7 @@ std::string Dacia::FileManager::ReadFileContent(std::string filepath)
 	catch(std::ofstream::failure e)
 	{
 		Log::Print(LOG::LOG_ERROR, "I/O exception caught: %s", e.what());
-		return "";
+		return "Error reading file";
 	}
 }
 

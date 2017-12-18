@@ -13,12 +13,12 @@
 #include <cwchar>
 
 #include <3rd Party\include\glad\glad.h>
-#include <includes/GLFW/glfw3.h>
+#include <glfw\include\GLFW\glfw3.h>
 
 #define DACIA_DEBUG 1
 
 #ifdef _WIN32
-#	ifndef WIN32_LEAN_AND_MEAN
+	#ifndef WIN32_LEAN_AND_MEAN
 		#define WIN32_LEAN_AND_MEAN
 	#endif
 	#include <Windows.h>
