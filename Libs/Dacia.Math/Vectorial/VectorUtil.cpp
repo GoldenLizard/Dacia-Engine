@@ -38,7 +38,7 @@ void dmath::GramSchmidt(std::vector<Vector3> & vectors)
 	for (auto vec : vectors)
 	{
 		vec -= projUtil(vec);
-		vec = Normalize(vec);
+		vec  = Normalize(vec);
 		++counter;
 	}
 }

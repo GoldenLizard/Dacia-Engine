@@ -106,12 +106,11 @@ namespace Dacia
 					m_openMode = OpenMode::CLOSED;
 				};
 
+				Path<_pchar>	m_path			{ std::basic_string<_pchar>("") };
+				size_t			m_fileSize		{0U};
 
-				Path<_pchar>					m_path			{ std::basic_string<_pchar>("") };
-				size_t							m_fileSize		{0U};
-
-				FileState						m_fileState		{FileState::INVALID};
-				OpenMode						m_openMode		{OpenMode::CLOSED};
+				FileState	    m_fileState		{FileState::INVALID};
+				OpenMode		m_openMode		{OpenMode::CLOSED};
 
 				std::basic_string<_pchar> m_extension	{ std::basic_string<_pchar>("") };
 				std::basic_string<_pchar> m_name		{ std::basic_string<_pchar>("") };

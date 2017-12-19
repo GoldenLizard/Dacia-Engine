@@ -77,9 +77,9 @@ namespace dmath
 			Color Grayscale();
 			Color Inverse();
 
-			union { byte R, C; };
-			union { byte G, Y; };
-			union { byte B, M; };
+			union { byte R, C, Y; };
+			union { byte G, Y, U; };
+			union { byte B, M, V; };
 			union { byte A, K; };
 		};
 

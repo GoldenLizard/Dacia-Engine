@@ -1,6 +1,8 @@
 #pragma once
 #include <Graphics\DaciaGraphics.hpp>
 #include <Dacia.Math\Definitions.hpp>
+#include <Dacia.Math\Vectorial\VectorUtil.hpp>
+#include <Graphics\GpuBuffer.hpp>
 
 
 namespace Dacia
@@ -27,14 +29,27 @@ namespace Dacia
 			dmath::Vector3 tangents;
 			dmath::Vector3 uvw;
 
-			dmath::Vector3 bitangents();
+			inline dmath::Vector3 bitangents();
 		};
 
-		struct VertexBuffer
+		inline dmath::Vector3 Dacia::Graphics::Vertex::bitangents()
 		{
-			GPU_Handle					handle;
-			VertexBufferFormat	const	content;
+			return dmath::Cross(normals, tangents);
+		}
 
+
+		struct VertexBuffer : 
+			public GpuBuffer
+		{
+			template<size_t size>
+			VertexBuffer(float (&content)[size]);
+
+			virtual void Init()		override;
+			virtual void Destroy()	override;
+			virtual void Bind()		override;
+			virtual void Unbind()	override;
+
+			VertexBufferFormat const content;
 		};
 	}
 }

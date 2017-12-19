@@ -24,7 +24,7 @@ namespace ARO
 				std::chrono::milliseconds m_worstFrame;
 
 				constexpr inline static double
-					toFPS(std::chrono::milliseconds duration)
+					ToFPS(std::chrono::milliseconds duration)
 				{
 					return 1e3 / duration.count();
 				}

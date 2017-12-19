@@ -35,8 +35,7 @@ namespace ARO
 				void Continue();
 				void Reset();
 
-				std::chrono::milliseconds
-					GetDuration();
+				std::chrono::milliseconds GetDuration();
 
 				double GetDurationHours();
 				double GetDurationMinutes();

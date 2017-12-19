@@ -7,6 +7,7 @@ namespace Dacia
 {
 	enum class KeyAction : byte
 	{
+		UNDEFINED,
 		PRESS	= 1 << 0, 
 		HOLD	= 1 << 1, 
 		RELEASE = 1 << 2
